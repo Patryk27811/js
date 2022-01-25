@@ -11,7 +11,7 @@ input.addEventListener("keyup", function(event) {
 function add() {
     var value = document.getElementById("Text").value;
     if (isNaN(value)) {
-        alert("Wprowadzaony tekst nie jest liczbą")
+        alert("Wprowadzony tekst nie jest liczbą")
         value = "";
         document.getElementById("Text").value = "";
     } else {
@@ -21,9 +21,15 @@ function add() {
     }
 }
 
+function wyczysc() {
+    tablicajs = [];
+    document.getElementById("values").innerHTML = tablicajs.join(", ");
+}
+
 function end() {
+
     var Tablicajsgt = tablicajs.map(function(x) { return parseInt(x, 10); });
-    Tablicajsnt = Tablicajsgt.sort(function(a, b) { return a - b });
+    Tablicajsgt = Tablicajsgt.sort(function(a, b) { return a - b });
 
     let min = Tablicajsgt[0];
     let suma = 0;
@@ -49,18 +55,18 @@ function end() {
         powers[i] = (Tablicajsgt[i] ** 2);
     }
 
-    let count2 = 0,
-        count3 = 0,
-        count1 = 0;
+    let c1 = 0,
+        c2 = 0,
+        c3 = 0;
 
     for (var i = 0; i < Tablicajsgt.length; i++) {
         if ((Tablicajsgt[i] % 2) == 0) {
-            count2 += 1;
+            c2 += 1;
         } else {
-            count1 += 1;
+            c1 += 1;
         }
         if ((Tablicajsgt[i] % 3) == 0) {
-            count3 += 1;
+            c3 += 1;
         }
     }
 
@@ -76,5 +82,6 @@ function end() {
         document.getElementById('output').innerHTML += "<br> Tablica nie zawiera wystarczająco dużo elementów, aby obliczyć 3 najwieksze i najmniejsze elementy";
     }
 
-    document.getElementById('output').innerHTML += '<br> tablica podniesiona do kwadratu: <br>' + powers.join(", ") + "<br> liczba parzystych: " + count2 + "<br> liczba nieparzystych: " + count1 + "<br> liczba podzielnych przez 3: " + count3;
+    document.getElementById('output').innerHTML += '<br> tablica podniesiona do kwadratu: <br>' + powers.join(", ") + "<br> liczba parzystych: " + c2 + "<br> liczba nieparzystych: " + c1 + "<br> liczba podzielnych przez 3: " + c3;
+
 }
