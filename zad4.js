@@ -92,12 +92,10 @@ function zad4() {
     });
 }
 
-function add4() //funkcja dodajaca elementy do tablicy
-{
+function add4() {
 
     var wartosc4 = document.getElementById("Text4").value;
-    if (isNaN(wartosc4)) //if sprawdzajacy czy wprowadzona wartosc jest liczba
-    {
+    if (isNaN(wartosc4)) {
         alert('wprowadzona wartosc nie jest liczbą');
         wartosc4 = "";
         document.getElementById("Text4").value = "";
@@ -107,7 +105,7 @@ function add4() //funkcja dodajaca elementy do tablicy
         document.getElementById("Text4").value = "";
 
         var closest = numbers.reduce(function(prev, curr) {
-            return (Math.abs(curr - a) < Math.abs(prev - a) ? curr : prev); //znalezienie najblizszej liczby do wprowadzonej przez uzytkownika
+            return (Math.abs(curr - a) < Math.abs(prev - a) ? curr : prev);
         });
 
         document.getElementById('output5').innerHTML = '<b>liczba najblizej wprowadzonej: ' + closest + '</b>';
