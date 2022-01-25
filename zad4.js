@@ -81,4 +81,49 @@ function zad4() {
     } else {
         document.getElementById('output4').innerHTML += "<br><br> liczba wystepujaca 3 lub wiecej razy w tablicy to: " + repeat4;
     }
+
+
+    var input = document.getElementById("Text4");
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            add4();
+        }
+    });
+}
+
+function add4() //funkcja dodajaca elementy do tablicy
+{
+
+    var wartosc4 = document.getElementById("Text4").value;
+    if (isNaN(wartosc4)) //if sprawdzajacy czy wprowadzona wartosc jest liczba
+    {
+        alert('wprowadzona wartosc nie jest liczbą');
+        wartosc4 = "";
+        document.getElementById("Text4").value = "";
+    } else {
+        let a = wartosc4;
+        wartosc4 = "";
+        document.getElementById("Text4").value = "";
+
+        var closest = numbers.reduce(function(prev, curr) {
+            return (Math.abs(curr - a) < Math.abs(prev - a) ? curr : prev); //znalezienie najblizszej liczby do wprowadzonej przez uzytkownika
+        });
+
+        document.getElementById('output5').innerHTML = '<b>liczba najblizej wprowadzonej: ' + closest + '</b>';
+        window.scroll(0, findPos(document.getElementById("output5")));
+
+    }
+
+    function findPos(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            return [curtop - 200];
+        }
+    }
+
+
 }
