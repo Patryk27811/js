@@ -17,3 +17,4 @@ for(i=0;i<tab2.length;i++){
     for(i=0;i<tab3.length;i++){
         document.write(tab3[i]+" ");
         }
+        document.write("<br><br>")
