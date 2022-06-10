@@ -8,7 +8,7 @@ const gameBoard = document.getElementById('plansza')
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm('Przegrałeś. Wcisnij ok by zgrac')) {
+    if (confirm('Przegrałeś. Wcisnij ok by zagrać ponownie')) {
       window.location = '/'
     }
     return
