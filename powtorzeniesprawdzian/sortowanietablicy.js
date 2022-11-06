@@ -5,7 +5,7 @@ for(var i=0;i<6;i++){
     tab.push(x);
 }
 tab = tab.map(Number);
-tab = point.sort(function(a,b){return a-b})
+tab = tab.sort(function(a,b){return a-b})
 console.log(tab);
 document.getElementById("dupa2").innerHTML = tab.join(", ");
 
