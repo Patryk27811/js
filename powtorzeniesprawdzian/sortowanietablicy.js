@@ -4,13 +4,15 @@ for(var i=0;i<6;i++){
     var x = prompt("wpisz liczbe");
     tab.push(x);
 }
-tab = tab.map(Number);
-tab = tab.sort(function(a,b){return a-b})
+//! drugi sposób
+//var y = prompt("Podaj liczbe").split(" "); //!tu bez pusza i normalnie dodaje do tablicy
+tab = tab.map(Number); //!to jest młody konwertowanie na inty
+tab = tab.sort(function(a,b){return a-b}) //!sortowanie, bo sam sort jest rozjebany
 console.log(tab);
-document.getElementById("dupa2").innerHTML = tab.join(", ");
+document.getElementById("dupa2").innerHTML = tab.join(", "); //!wypisywanie wartości
 
  function usunostatni(){
-        tab.pop();
+        tab.pop(); //!usuwanie ostatniego
         
     document.getElementById("dupa2").innerHTML = tab.join(",");
 }
