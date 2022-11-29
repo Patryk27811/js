@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Snake</title>
-  <style>
-    body {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      background-color: black;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrukcja przed zaczęciem</title>
+<style>
+    body{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        background-color: aquamarine;
     }
+    a{
+        text-decoration: none;
+    }
+    #przycisk{
+        display: flex;
+        justify-content: center;
+        border: none;
+        background-color: transparent;
+        font-size: 25px;
+    }
+    #game{
+        border: none;
+        background-color: transparent;
+        font-size: 25px;
+    }
+    #game:hover{
+        background-color: rgb(0, 195, 130);
+    }
+</style>
 
-    #plansza {
-      background-color: #CCC;
-      width: 100vmin;
-      height: 100vmin;
-      display: grid;
-      grid-template-rows: repeat(21, 1fr);
-      grid-template-columns: repeat(21, 1fr);
-    }
-
-    .waz {
-      background-color: hsl(200, 100%, 50%);
-      border: .25vmin solid black;
-    }
-
-    .jedzenie {
-      background-color: hsl(50, 100%, 50%);
-      border: .25vmin solid black;
-    }
-  </style>
-  <script src="gra.js" defer type="module"></script>
 </head>
 <body>
-  <div id="plansza"></div>
+    <div>
+        <ol>
+            <li>Sterowanie odbywa się za pomocą strzałek</li>
+            <li>Gdy dotkniemy ścianki, bądź wąz dogoni swoje ciało gra się kończy</li>
+            <li>Aby przejść do gry nalezy wcisnąć przycisk "Przejdz do gry"</li>
+        </ol>
+    </div>
+    <div id="przycisk">
+    <a href="snake.html"><button id="game">Przejdz do gry</button></a>
+    </div>
 </body>
 </html>
